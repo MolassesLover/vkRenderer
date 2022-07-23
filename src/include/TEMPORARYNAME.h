@@ -1,0 +1,10 @@
+#pragma once
+#include <assert.h>
+#include <glm/glm.hpp>
+#include <iostream>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_vulkan.h>
+#include <set>
+#include <vector>
+#include <vulkan/vulkan.h>
+#include <vulkan/vulkan_core.h>

@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "cd src/scripts && python3 lint.py && cd ../../ && cmake -B bin -DCMAKE_BUILD_TYPE=Release && cmake --build bin -j$(nproc)",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": 
+            {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Lint",
+            "type": "shell",
+            "command": "cd src/scripts && python3 lint.py",
+            "problemMatcher": [
+                "$uncrustify"
+            ],
+            "group": 
+            {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Test",
+            "type": "shell",
+            "command": "valgrind ./bin/TEMPORARYNAME --tool=memcheck --leak-check=yes --show-reachable=yes --leak-check=full",
+            "problemMatcher": [
+                "$valgrind"
+            ],
+            "group": 
+            {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}   

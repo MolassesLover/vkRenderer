@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install libvulkan-dev libsdl2 uncrustify cmake python3
+
+    - name: Lint
+      run: |
+        cd src/scripts
+        python3 lint.py
+        cd ../../
+
+    - name: Build
+      run: |
+        cmake -B bin -DCMAKE_BUILD_TYPE=Release
+        cmake --build bin -j$(nproc)
+    
+    - name: Test
+      run: |
+        timeout 300 valgrind ./TEMPORARYNAME --tool=memcheck --leak-check=yes --show-reachable=yes --leak-check=full
