@@ -31,8 +31,3 @@ jobs:
       run: |
         cmake -B bin -DCMAKE_BUILD_TYPE=Release
         cmake --build bin -j$(nproc)
-    
-    - name: Test
-      run: |
-        cd bin
-        timeout 300 valgrind ./TEMPORARYNAME --tool=memcheck --leak-check=yes --show-reachable=yes --leak-check=full
