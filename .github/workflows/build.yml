@@ -19,7 +19,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install libvulkan-dev libsdl2-dev uncrustify cmake python3
+        sudo apt-get install libvulkan-dev libsdl2-dev libglm-dev uncrustify cmake python3
 
     - name: Lint
       run: |
