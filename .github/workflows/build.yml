@@ -34,4 +34,5 @@ jobs:
     
     - name: Test
       run: |
+        cd bin
         timeout 300 valgrind ./TEMPORARYNAME --tool=memcheck --leak-check=yes --show-reachable=yes --leak-check=full
