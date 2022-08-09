@@ -1,7 +1,8 @@
-#include "include/interface_vulkan.hpp"
+#include "include/TEMPORARYNAME.h"
+#include "include/vulkan_interface.hpp"
 
 int main() {
-    Application app;
+    HelloTriangleApplication app;
 
     try {
         app.run();
