@@ -1,24 +1,19 @@
 cmake_minimum_required(VERSION 3.8)
 project(TEMPORARYNAME)
 
-include(FindX11)
-
 find_package(Vulkan REQUIRED)
-find_package(SDL2 REQUIRED)
+find_package(glfw3 REQUIRED)
 
 set(SOURCE_FILES
 	src/main.cpp
-	src/rendering.cpp
-	src/select_gpu.cpp
 )
 
 set(HEADER_FILES
-	src/include/rendering.h
-	src/include/select_gpu.h
 	src/include/TEMPORARYNAME.h
+	src/include/interface_vulkan.hpp
 )
 
-include_directories(src/include ${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS})
+include_directories(src/include ${glfw3_INCLUDE_DIRS} )
 
 add_executable(TEMPORARYNAME ${SOURCE_FILES})
 add_library(TEMPORARYNAMELIB SHARED ${SOURCE_FILES})
@@ -26,8 +21,7 @@ add_library(TEMPORARYNAMELIB SHARED ${SOURCE_FILES})
 set_target_properties(TEMPORARYNAMELIB PROPERTIES OUTPUT_NAME "TEMPORARYNAME")
 
 target_link_libraries(TEMPORARYNAME ${Vulkan_LIBRARIES})
-target_link_libraries(TEMPORARYNAME ${SDL2_LIBRARIES})
-target_link_libraries(TEMPORARYNAME ${X11_LIBRARIES})
+target_link_libraries(TEMPORARYNAME glfw3)
 
 install(TARGETS TEMPORARYNAME 
 		DESTINATION bin)
