@@ -22,8 +22,8 @@ set(SOURCE_FILES
 )
 
 set(HEADER_FILES
-  src/include/vulkan_interface.hpp
 	src/include/TEMPORARYNAME.h
+  src/include/vulkan_interface.hpp
 )
 
 include_directories(src/include 
@@ -42,9 +42,19 @@ target_link_libraries(TEMPORARYNAME
   ${Vulkan_LIBRARIES}
 )
 
+add_custom_command(TARGET TEMPORARYNAME
+  POST_BUILD
+  COMMAND cd ${CMAKE_SOURCE_DIR}/src/scripts && python3 compile_shaders.py
+)
+
+add_custom_command(TARGET TEMPORARYNAME
+  POST_BUILD
+  COMMAND cd ${CMAKE_SOURCE_DIR} && cp -r ass/models bin/ && cp -r ass/textures bin/
+)
+
 install(TARGETS TEMPORARYNAME 
-		DESTINATION bin)
+	DESTINATION bin)
 install(TARGETS TEMPORARYNAMELIB
-		DESTINATION lib)
+	DESTINATION lib)
 install(FILES ${HEADER_FILES} 
-		DESTINATION include/TEMPORARYNAME)
+	DESTINATION include/TEMPORARYNAME)
