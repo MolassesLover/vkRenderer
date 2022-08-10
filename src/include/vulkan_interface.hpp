@@ -1,8 +1,7 @@
-const uint32_t WIDTH = 800;
-const uint32_t HEIGHT = 600;
+#include "TEMPORARYNAME.h"
 
-const std::string MODEL_PATH = "models/viking_room.obj";
-const std::string TEXTURE_PATH = "textures/viking_room.png";
+const uint32_t WIDTH = 2560;
+const uint32_t HEIGHT = 1440;
 
 const int MAX_FRAMES_IN_FLIGHT = 2;
 
@@ -212,10 +211,10 @@ void initVulkan() {
     createColorResources();
     createDepthResources();
     createFramebuffers();
-    createTextureImage();
+    createTextureImage("textures/viking_room.png");
     createTextureImageView();
     createTextureSampler();
-    loadModel();
+    loadModel("models/viking_room.obj");
     createVertexBuffer();
     createIndexBuffer();
     createUniformBuffers();
@@ -856,9 +855,9 @@ bool hasStencilComponent(VkFormat format) {
     return format == VK_FORMAT_D32_SFLOAT_S8_UINT || format == VK_FORMAT_D24_UNORM_S8_UINT;
 }
 
-void createTextureImage() {
+void createTextureImage(std::string texture) {
     int texWidth, texHeight, texChannels;
-    stbi_uc *pixels = stbi_load(TEXTURE_PATH.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
+    stbi_uc *pixels = stbi_load(texture.c_str(), &texWidth, &texHeight, &texChannels, STBI_rgb_alpha);
     VkDeviceSize imageSize = texWidth * texHeight * 4;
 
     mipLevels = static_cast<uint32_t>(std::floor(std::log2(std::max(texWidth, texHeight)))) + 1;
@@ -1181,13 +1180,13 @@ void copyBufferToImage(VkBuffer buffer, VkImage image, uint32_t width, uint32_t 
     endSingleTimeCommands(commandBuffer);
 }
 
-void loadModel() {
+void loadModel(std::string model) {
     tinyobj::attrib_t attrib;
     std::vector<tinyobj::shape_t> shapes;
     std::vector<tinyobj::material_t> materials;
     std::string warn, err;
 
-    if (!tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, MODEL_PATH.c_str())) {
+    if (!tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, model.c_str())) {
         throw std::runtime_error(warn + err);
     }
 
@@ -1543,7 +1542,7 @@ void updateUniformBuffer(uint32_t currentImage) {
 
     UniformBufferObject ubo{};
 
-    ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
     ubo.view = glm::lookAt(glm::vec3(2.0f, 2.0f, 2.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
     ubo.proj = glm::perspective(glm::radians(45.0f), swapChainExtent.width / (float)swapChainExtent.height, 0.1f, 10.0f);
     ubo.proj[1][1] *= -1;
