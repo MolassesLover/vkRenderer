@@ -4,8 +4,8 @@
 
 This renderer was made possible thanks to the incredible work done by
 [Sascha Willems](https://github.com/SaschaWillems) and **many** other 
-contributors on the [Vulkan-glTF-PBR](), and the 
-[Vulkan examples](https://github.com/SaschaWillems/Vulkan) repositories.
+contributors on the [Vulkan-glTF-PBR](https://github.com/SaschaWillems/Vulkan-glTF-PBR), 
+and the [Vulkan examples](https://github.com/SaschaWillems/Vulkan) repositories.
 
 The [Vulkan SDL](https://github.com/naivisoftware/vulkansdldemo) demo by 
 [NAP Labs](https://github.com/naivisoftware) helped tremendously in
