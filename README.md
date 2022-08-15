@@ -25,9 +25,11 @@ I do not plan on using another graphics API like OpenGL or DirectX, either.
 > **Note**: I try my best to keep these dependencies up to date on my package manager,
 [BeePM](https://github.com/BeePackages).
 
-- [GLFW](https://pkgs.org/download/glfw)
-- [Uncrustify](https://pkgs.org/search/?q=uncrustify)
-- [Vulkan](https://pkgs.org/search/?q=vulkan)
+| Dependency | [pkgs.org](https://pkgs.org/)                                                                                                                                            | [brew.sh](https://brew.sh/)                                                                                                                                                                              |
+|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GLFW       | [![pkgs.org](https://img.shields.io/badge/install-pkgs-blue?style=for-the-badge&color=E35B57&logoColor=FFFFFF&labelColor=232323)](https://pkgs.org/search/?q=glfw)       | [![pkgs.org](https://img.shields.io/badge/install-brew-blue?style=for-the-badge&logo=homebrew&color=E35B57&logoColor=FFFFFF&labelColor=232323)](https://formulae.brew.sh/formula/glfw#default)           |
+| Uncrustify | [![pkgs.org](https://img.shields.io/badge/install-pkgs-blue?style=for-the-badge&color=E35B57&logoColor=FFFFFF&labelColor=232323)](https://pkgs.org/search/?q=uncrustify) | [![pkgs.org](https://img.shields.io/badge/install-brew-blue?style=for-the-badge&logo=homebrew&color=E35B57&logoColor=FFFFFF&labelColor=232323)](https://formulae.brew.sh/formula/uncrustify#default)     |
+| Vulkan     | [![pkgs.org](https://img.shields.io/badge/install-pkgs-blue?style=for-the-badge&color=E35B57&logoColor=FFFFFF&labelColor=232323)](https://pkgs.org/search/?q=vulkann)    | [![pkgs.org](https://img.shields.io/badge/install-brew-blue?style=for-the-badge&logo=homebrew&color=E35B57&logoColor=FFFFFF&labelColor=232323)](https://formulae.brew.sh/formula/vulkan-headers#default) |
 
 ## Building
 
