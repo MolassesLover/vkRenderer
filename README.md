@@ -21,7 +21,7 @@ unsupported on older hardware.
 
 I do not plan on using another graphics API like OpenGL or DirectX, either. 
 
-![screenshot](www/img/screenshot.png)
+![screenshot](docs/img/screenshot.png)
 > Model by [@fletcherkinnear](https://sketchfab.com/fletcherkinnear)
 
 ## Dependencies
