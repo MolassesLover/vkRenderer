@@ -3,8 +3,10 @@
 [![Patreon](https://img.shields.io/badge/donate-patreon-blue?style=for-the-badge&logo=patreon&color=E35B57&logoColor=FFFFFF&labelColor=232323)](https://www.patreon.com/molasseslover)
 
 This is a Vulkan learning project I started, following the [Vulkan Tutorial](https://vulkan-tutorial.com/).
-The `rewrite` branch (which you are on) uses code roughly identical to the tutorial. By the end of the
-rewrite, it will look nothing like this. I'm just testing out GLFW.
+Currently, the project uses code roughly identical to the tutorial. By the
+end of an ongoing rewrite, it will look nothing like this. I'm just testing out GLFW.
+Many changes are coming, and have not yet been pushed to this repository,
+in order to take care of legal information and credits.
 
 It's also important to note that this is 100% a hobby project. It takes shortcuts,
 uses other open-source projects as a crutch, and doesn't take itself that seriously.
