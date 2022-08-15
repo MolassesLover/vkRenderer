@@ -48,3 +48,7 @@ to create jobs equal to the number provided by `$(nproc)`. If you are on XNU/mac
 Once CMake finishes, the binaries should be available in the directory
 equal to CMake's `-B` flag. In the case of the example commands, that should be
 in the `bin` directory. 
+
+# Preview
+
+![screenshot](docs/img/screenshot.png)
