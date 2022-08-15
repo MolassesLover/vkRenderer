@@ -21,7 +21,7 @@ I do not plan on using another graphics API like OpenGL or DirectX, either.
 
 ## Dependencies
 > **Note**: I try my best to keep these dependencies up to date on my package manager,
-[BeePM](https://github.com/DiligentGraphics/DiligentEngine).
+[BeePM](https://github.com/BeePackages).
 
 - [GLFW](https://pkgs.org/download/glfw)
 - [Uncrustify](https://pkgs.org/search/?q=uncrustify)
