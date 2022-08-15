@@ -20,7 +20,9 @@ to that project, as well.
 
 ## Assets
 
+The model in the GitHub thumbnail was created by [@fletcherkinnear](https://sketchfab.com/fletcherkinnear)
+over on Sketchfab and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 The [viking room model](https://sketchfab.com/3d-models/viking-room-a49f1b8e4f5c4ecf9e1fe7d81915ad38), 
 used throughout the repository's history was created by [@nigelgoh](https://sketchfab.com/nigelgoh) 
 on Sketchfab and is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-
