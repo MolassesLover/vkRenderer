@@ -215,7 +215,6 @@ void initVulkan() {
     createTextureImageView();
     createTextureSampler();
     loadModel("models/viking_room.obj");
-    loadModel("models/suzanne.obj");
     createVertexBuffer();
     createIndexBuffer();
     createUniformBuffers();
