@@ -21,9 +21,11 @@ unsupported on older hardware.
 
 I do not plan on using another graphics API like OpenGL or DirectX, either. 
 
+![screenshot](docs/img/screenshot.png)
+> Model by [@fletcherkinnear](https://sketchfab.com/fletcherkinnear)
+
 ## Dependencies
-> **Note**: I try my best to keep these dependencies up to date on my package manager,
-[BeePM](https://github.com/BeePackages).
+> **Note**: The list of dependencies might be incomplete, sorry!
 
 | Dependency | [pkgs.org](https://pkgs.org/)                                                                                                                                            | [brew.sh](https://brew.sh/)                                                                                                                                                                              |
 |------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -48,7 +50,3 @@ to create jobs equal to the number provided by `$(nproc)`. If you are on XNU/mac
 Once CMake finishes, the binaries should be available in the directory
 equal to CMake's `-B` flag. In the case of the example commands, that should be
 in the `bin` directory. 
-
-# Preview
-
-![screenshot](docs/img/screenshot.png)
