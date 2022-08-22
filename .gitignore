@@ -33,6 +33,7 @@
 # Binaries
 [Bb]uild
 [Bb]in
+[Tt]arget
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
