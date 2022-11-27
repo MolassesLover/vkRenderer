@@ -8,11 +8,6 @@ end of an ongoing rewrite, it will look nothing like this. I'm just testing out 
 Many changes are coming, and have not yet been pushed to this repository,
 in order to take care of legal information and credits.
 
-It's also important to note that this is 100% a hobby project. It takes shortcuts,
-uses other open-source projects as a crutch, and doesn't take itself that seriously.
-I plan on making games with this renderer, but this isn't aiming to be the next
-[BGFX](https://github.com/bkaradzic/bgfx) or [DiligentEngine](https://github.com/DiligentGraphics/DiligentEngine), by any means.
-
 My end goal is to make a 3D rendering engine that targets 'mixed' lighting, which
 is a combination of both statically baked, and realtime lightmaps. It is specifically
 designed for newer hardware, and specs into quality moreso than raw performance.
